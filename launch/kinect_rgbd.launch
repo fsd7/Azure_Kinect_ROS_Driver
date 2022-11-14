@@ -9,7 +9,7 @@
 
   <group if="$(arg overwrite_robot_description)">
     <param name="robot_description"
-      command="xacro $(find azure_kinect_ros_driver)/urdf/azure_kinect.urdf.xacro tf_prefix:=$(arg tf_prefix)" />
+      textfile="$(find azure_kinect_ros_driver)/urdf/azure_kinect.urdf.xacro" />
     <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
   </group>
